@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — change these values to rebrand the whole application.
+ */
+@theme {
+    --font-sans: 'Plus Jakarta Sans', 'Tajawal', system-ui, -apple-system, sans-serif;
+
+    /* Brand — warm terracotta */
+    --color-brand-50: #fff4ef;
+    --color-brand-100: #ffdbce;
+    --color-brand-200: #ffb599;
+    --color-brand-300: #ffddb8;
+    --color-brand-500: #cc4900;
+    --color-brand-600: #a33900;
+    --color-brand-700: #8a3000;
+    --color-brand-950: #370e00;
+
+    /* Accents */
+    --color-saffron: #fea619;
+    --color-saffron-ink: #2a1700;
+    --color-required: #855300;
+
+    /* Surfaces — cool ice blue */
+    --color-surface: #f8f9ff;
+    --color-field: #eff4ff;
+    --color-field-line: #dee9fc;
+    --color-chip: #e6eeff;
+
+    /* Ink */
+    --color-ink: #121c2a;
+    --color-ink-muted: #5a4138;
+    --color-ink-faint: #8e7166;
+    --color-ink-inverse: #f8f9ff;
+    --color-ink-inverse-muted: #d9e3f6;
+}
+
+@layer base {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        background-color: var(--color-surface);
+        color: var(--color-ink);
+        min-height: 100vh;
+    }
+
+    /* Hide the browser's native password reveal control — the design ships its own. */
+    input::-ms-reveal,
+    input::-ms-clear {
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-field-line);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-200);
+}
