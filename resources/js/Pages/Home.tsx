@@ -45,6 +45,7 @@ export default function Home() {
                     <FlashAlerts />
 
                     <div className="flex flex-col gap-2">
+                        <p className="text-5xl leading-none font-bold tracking-[-1px] text-brand-600">Tawla</p>
                         <h1 className="text-3xl leading-9.5 font-bold tracking-[-0.75px] text-ink">
                             {auth.user ? `Welcome back, ${auth.user.name}` : 'Welcome'}
                         </h1>
